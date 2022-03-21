@@ -1,18 +1,26 @@
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { TouchableOpacity } from 'react-native-gesture-handler'
-import { Input } from 'react-native-elements'
+import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
+import Recommended from '../../Components/Recommended';
+import { Button } from 'react-native-elements';
+import LatestUploaded from '../../Components/LatestUploaded';
 
-export default function Home({ navigation }) {
+
+export default function Home() {
+
     return (
-        <View>
-            <Input
-                placeholder='BASIC INPUT' />
-            <TouchableOpacity onPress={() => navigation.navigate('Details')}>
-                <Text>
-                    ke Details
-                </Text>
-            </TouchableOpacity>
+        <View style={Styles.container}>
+            <Recommended />
+            <LatestUploaded />
         </View>
     )
 }
+
+const Styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        padding: moderateScale(12),
+        backgroundColor: '#493b7a'
+    },
+
+})
