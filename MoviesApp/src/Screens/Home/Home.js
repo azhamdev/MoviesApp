@@ -7,7 +7,6 @@ import LatestUploaded from '../../Components/LatestUploaded';
 
 
 export default function Home() {
-
     return (
         <View style={Styles.container}>
             <Recommended />
